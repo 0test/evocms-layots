@@ -1,7 +1,5 @@
 import '../css/style.css'
-import '../scss/main.scss'
-
-
+import '../scss/main.scss';
 (() => {
 	'use strict'
 	window.addEventListener('scroll', () => {
@@ -16,7 +14,7 @@ import '../scss/main.scss'
 	});
 
 	var menubtn = document.getElementById('showmenu');
-	menubtn.addEventListener('click', (e) => {
+	menubtn.addEventListener('click', function(e){
 		menubtn.classList.toggle('active');
 		document.getElementById('menulist').classList.toggle('active');
 	}, false);

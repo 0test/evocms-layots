@@ -11,6 +11,7 @@
 	min-width: 220px;
 	transition-duration: 0.4s;
 	white-space: nowrap;
+	border-radius: 2em;
 	:hover {
 		text-decoration: none;
 	}
@@ -22,11 +23,11 @@
 	border: 1px solid #ffffff;
 	&:hover {
 		background: $color_dark_text;
-		border: 1px solid $color_dark_text;
+		border: 1px solid #ffffff96;
 	}
 	&:active {
 		background: $color_dark_text;
-		border: 1px solid $color_dark_text;
+		border: 1px solid #ffffff96;
 		text-decoration: none;
 	}
 }
@@ -36,11 +37,11 @@
 	border: 1px solid #ffffff;
 	&:hover {
 		background: $color_dark_text;
-		border: 1px solid $color_dark_text;
+		border: 1px solid 1px solid #ffffff96;
 	}
 	&:active {
 		background: $color_dark_text;
-		border: 1px solid $color_dark_text;
+		border: 1px solid #ffffff96;
 		text-decoration: none;
 	}
 }

@@ -8,13 +8,9 @@ body {
 	background-color: $color_dark_back;
 	color: $color_dark_text;
 	font-weight: normal;
-	font-family: -apple-system, BlinkMacSystemFont,Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
-		sans-serif;
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
-main {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+	Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+	"Helvetica Neue", sans-serif;
 	margin: 0 auto;
 }
 a {
@@ -43,6 +39,8 @@ h1 {
 	}
 }
 .block {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	h2 {
 		text-align: center;
@@ -66,6 +64,7 @@ h1 {
 	margin: 0 auto;
 	padding-left: 1em;
 	padding-right: 1em;
+	width: 100%;
 }
 .header {
 	transition-duration: 0.2s;
@@ -258,6 +257,7 @@ h1 {
 .header .wrapper {
 	overflow: visible;
 	display: flex;
+	flex-direction: inherit;
 	justify-content: space-between;
 	width: 100%;
 	align-items: center;
@@ -407,14 +407,14 @@ h1 {
 				color: $color_dark_back;
 				&:hover {
 					h3 {
-						color: $color_contrast1;
+						color: $color_dark_back;
 					}
 				}
 			}
 		}
 		.news_text h3 {
 			font-weight: 100;
-			color: $color_dark_back;
+			color: $color_contrast1;
 			margin-bottom: 1em;
 			font-size: 1.4em;
 			line-height: 140%;
