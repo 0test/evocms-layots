@@ -1,0 +1,60 @@
+.btn {
+	display: inline-block;
+	border: 1px solid transparent;
+	text-decoration: none;
+	padding: 1em 3em;
+	text-align: center;
+	font-weight: 100;
+	color: $color_dark_back;
+	position: relative;
+	max-width: 250px;
+	min-width: 220px;
+	transition-duration: 0.4s;
+	white-space: nowrap;
+	:hover {
+		text-decoration: none;
+	}
+}
+
+.btn_dark {
+	background: $color_dark_back;
+	color: #fff;
+	border: 1px solid #ffffff;
+	&:hover {
+		background: $color_dark_text;
+		border: 1px solid $color_dark_text;
+	}
+	&:active {
+		background: $color_dark_text;
+		border: 1px solid $color_dark_text;
+		text-decoration: none;
+	}
+}
+.btn_green {
+	background: $color_contrast2;
+	color: #fff;
+	border: 1px solid #ffffff;
+	&:hover {
+		background: $color_dark_text;
+		border: 1px solid $color_dark_text;
+	}
+	&:active {
+		background: $color_dark_text;
+		border: 1px solid $color_dark_text;
+		text-decoration: none;
+	}
+}
+
+.btn_light {
+	border: 1px solid $color_dark_back;
+	background: $color_text;
+	color: $color_dark_back;
+	&:hover {
+		border: 1px solid $color_dark_back;
+		background: $color_dark_back;
+		color: #ffffff;
+	}
+}
+.btn_section {
+	text-align: center;
+}

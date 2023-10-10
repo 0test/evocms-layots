@@ -1,0 +1,25 @@
+$color_dark_text: #adb5bd;
+$color_dark_back: #212529;
+
+$color_light_text: #adb5bd;
+$color_text: #fff;
+
+$color_contrast1:#69acdf;
+$color_contrast2:#599f46;
+$header_height_normal:90px;
+$header_height_mobile: 60px;
+
+$fontsize: 15px;
+
+
+
+@mixin grid($count, $margin) {
+    width: unquote("calc( (100% / " + $count + ") - (" + $margin + "px * " + ($count - 1) + " / " + $count + ") )");
+    flex-basis: unquote( "calc( (100% / " + $count + ") - (" + $margin + "px * " + ($count - 1) + " / " + $count + ") )");
+    &:nth-child(#{$count}n + #{$count}) {
+        margin-right: 0;
+    }
+    &:not(:nth-child(#{$count}n)) {
+        margin-right: $margin + px;
+    }
+}
