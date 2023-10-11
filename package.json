@@ -19,7 +19,7 @@
     "vite-plugin-handlebars": "^1.6.0"
   },
   "devDependencies": {
-    "sass": "^1.60.0",
+    "sass": "^1.69.2",
     "vite": "^4.2.1"
   }
 }

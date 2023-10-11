@@ -12,6 +12,9 @@ body {
 	Roboto, Oxygen-Sans, Ubuntu, Cantarell,
 	"Helvetica Neue", sans-serif;
 	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+    flex-direction: column;
 }
 a {
 	color: $color_text;
@@ -42,6 +45,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	flex:1 0;
 	h2 {
 		text-align: center;
 		font-size: 2em;
@@ -71,7 +75,6 @@ h1 {
 	height: $header_height_normal;
 	border-bottom: 1px solid $color_dark_text;
 	background: $color_dark_back;
-	float: none;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	&.fix {
@@ -251,16 +254,15 @@ h1 {
 			display: none;
 		}
 	}	
+	flex-direction: inherit;
 }
 
 .header,
 .header .wrapper {
-	overflow: visible;
 	display: flex;
-	flex-direction: inherit;
-	justify-content: space-between;
 	width: 100%;
 	align-items: center;
+	flex:1 0;
 }
 
 .promo{
@@ -386,7 +388,7 @@ h1 {
 		flex-flow: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		li {
+		.one_news {
 			list-style: none;
 			@include grid(2, 30);
 			display: flex;
@@ -405,32 +407,61 @@ h1 {
 				text-align: left;
 				transition-duration: 0.2s;
 				color: $color_dark_back;
+				.news_text h3 {
+					font-weight: 100;
+					color: $color_contrast1;
+					margin-bottom: 1em;
+					font-size: 1.4em;
+					line-height: 140%;
+				}
+				.news_intro {
+					line-height: 140%;
+					font-size: 0.9em;
+					margin-bottom: 1em;
+				}				
 				&:hover {
 					h3 {
 						color: $color_dark_back;
 					}
 				}
 			}
+						
 		}
-		.news_text h3 {
-			font-weight: 100;
-			color: $color_contrast1;
-			margin-bottom: 1em;
-			font-size: 1.4em;
-			line-height: 140%;
-		}
-		.news_intro {
-			line-height: 140%;
-			font-size: 0.9em;
-			margin-bottom: 1em;
-		}
+
 		@media screen and (max-width: 600px) {
 			flex-direction: column;
-			li {
+			.one_news {
 				@include grid(1, 0);
 				margin-bottom: 1rem;
 				&:last-child {
 					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.pagination{
+		display: flex;
+		nav{
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: center;
+			font-size: 0.9em;
+			a,span{
+				display: flex;
+				width: 40px;
+				height: 40px;
+				border:1px solid transparent;
+				border-radius: 40px;
+				margin-right: 1em;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+			}
+			a{
+				border:1px solid #ffffff75;
+				&:hover{
+					border-color: $color_contrast1;
 				}
 			}
 		}
@@ -527,6 +558,7 @@ h1 {
 	color: #fff;
 	font-size: 0.9em;
 	padding-bottom: 0;
+	flex: 0 0;
 
 	.wrapper {
 		text-align: center;

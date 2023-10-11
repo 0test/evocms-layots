@@ -3,14 +3,8 @@ import '../scss/main.scss';
 (() => {
 	'use strict'
 	window.addEventListener('scroll', () => {
-		var header = document.getElementById('fix');
 		var top = (window.scrollY || window.scrollTop) - (window.clientTop || 0);
-		if (top) {
-			header.classList.add('scrolled');
-		}
-		else {
-			header.classList.remove('scrolled');
-		}
+		document.getElementById('fix').classList.toggle('scrolled',top);
 	});
 
 	var menubtn = document.getElementById('showmenu');
