@@ -59,7 +59,7 @@ h1 {
 	}
 
 	&.block_dark {
-		background-color: #000;
+		background-color: #141414;
 	}
 	padding-bottom: 3em;
 }
@@ -274,7 +274,7 @@ h1 {
 	}
 	
 	.promo_text{
-		padding-left: 2em;
+		padding-right: 2em;
 		order:1;
 		width:40%;
 		margin:0 auto;
@@ -289,14 +289,35 @@ h1 {
 				margin-bottom: 0;
 			}
 		}
-
 	}
 	.promo_image{
 		order:2;
 		width:60%;
+		position: relative;
 		img{
 			max-width: 100%;
 		}
+	}
+	.promo_btn_youtube{
+		position: absolute;
+		background-color: transparent;
+		border:none;
+		top:50%;
+		left:50%;
+		z-index: 2;
+		margin-left: -2em;
+		margin-top: -2em;
+		i{
+			color: #f00;
+			font-size: 4em;
+			opacity: 0.7;
+		}
+		&:hover{
+			i{
+				opacity: 1;
+			}
+		}
+
 	}
 	@media screen and (max-width:1024px) {
 		.promo_text{
@@ -309,7 +330,7 @@ h1 {
 	@media screen and (max-width:768px) {
 		.promo_text{
 			width: 100%;
-			padding-left: 0;
+			padding-right: 0;
 		}
 		.promo_image{
 			display: none;
@@ -355,7 +376,7 @@ h1 {
 			margin-bottom: 0.6em;
 			color: $color_contrast1;
 			font-size: 3.6em;
-			font-weight: 500;
+			font-weight: 100;
 		}
 		small {
 			font-size: 0.5em;
@@ -526,6 +547,36 @@ h1 {
 	}
 }
 
+.features {
+	.features_logos {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.one_feature {
+			@include grid(2, 30);
+			margin-bottom: 30px;
+			color:$color_text;
+			h3{
+				font-weight: 100;
+				font-size: 1.2em;
+				display: flex;
+				align-items: center;
+				margin-bottom: 1em;
+				i {
+					font-size: 1.4em;
+					opacity: 0.5;
+					margin-right: 0.4em;
+				}
+			}
+			p{
+				line-height: 150%;
+			}
+			@media screen and (max-width: 768px) {
+				@include grid(1, 0);
+			}
+		}
+	}
+}
 .block_introtext {
 	width: 60%;
 	margin: 0 auto;
